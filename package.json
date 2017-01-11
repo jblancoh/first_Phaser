@@ -1,0 +1,19 @@
+{
+  "name": "first_phaser",
+  "version": "1.0.0",
+  "description": "First game in phaser",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jblancoh/first_Phaser.git"
+  },
+  "author": "Jonathan Blanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jblancoh/first_Phaser/issues"
+  },
+  "homepage": "https://github.com/jblancoh/first_Phaser#readme"
+}

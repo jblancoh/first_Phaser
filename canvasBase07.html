@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas</title>
+</head>
+<style>
+  #miCanvas
+  {
+    border: dotted 2px yellow;
+    background: green;
+  }
+</style>
+<body>
+  <h1>Conceptos basicos de CANVAS</h1>
+  <canvas id="miCanvas" width="500px" height="300px">
+    Tu
+  </canvas>
+</body>
+<script>
+  window.onload = function(){
+    var canvas = document.getElementById('miCanvas')
+    if ( canvas && canvas.getContext){
+      var ctx = canvas.getContext('2d')
+      if(ctx){
+        ctx.lineWidth = 10
+        ctx.strokeStyle = "yellow"
+        ctx.fillStyle = "red"
+
+        ctx.beginPath()
+        ctx.arc(100,150,50,1.1*Math.PI,1.9*Math.PI, true)
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.arc(250,150,50,1*Math.PI,1.3*Math.PI, true)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.arc(400,150,50,0,2*Math.PI,true)
+        ctx.stroke()
+      }
+      else {
+
+      }
+    }
+  }
+</script>
+</html>

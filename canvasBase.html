@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas</title>
+</head>
+<style>
+  #miCanvas
+  {
+    border: dotted 2px yellow;
+    background: green;
+  }
+</style>
+<body>
+  <h1>Conceptos basicos de CANVAS</h1>
+  <canvas id="miCanvas" width="500px" height="300px">
+    Tu
+  </canvas>
+</body>
+<script>
+  window.onload = function(){
+    var canvas = document.getElementById('miCanvas')
+    if ( canvas && canvas.getContext){
+      var ctx = canvas.getContext('2d')
+      if(ctx){
+        var bola = new Image()
+
+        function muestraPatron(repite){
+          ctx.font = "7em Verdana"
+          ctx.lineWidth = 1.0
+          ctx.fillStyle = "blue"
+          ctx.strokeStyle = "yellow"
+
+          var patron = ctx.createPattern(bola, repite)
+          ctx.clearRect(0,0,canvas.width, canvas.height)
+          ctx.fillStyle = patron
+        //  ctx.fillRect(0,0, canvas.width, canvas.height)
+          ctx.fillText("HOLA",15,150)
+        }
+        bola.src = "bola.png"
+        bola.onload = function(e){
+          muestraPatron("repeat")
+        }
+      }
+      else {
+
+      }
+    }
+  }
+</script>
+</html>
